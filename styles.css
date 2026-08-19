@@ -15,6 +15,7 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
+    width: 100%;
 }
 
 nav {
@@ -169,6 +170,80 @@ nav img {
     cursor: pointer;
 }
 
+/* PROJECTS SECTION */
+#projects {
+    background-color: #FDFBF7;
+    color: #1A0F0A;
+    padding: 6rem 2rem;
+    border-bottom: 2px solid #E5DFD3;
+}
+
+.project-header h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem; /* Clean separating distance before grid cards */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #F4EFEA;
+    border: 2px solid rgba(26, 15, 10, 0.06);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Keeps card descriptions professional and readable */
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #1A0F0A;
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4B3621;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* FIXED IMAGE CONFIGURATION */
+.project-card .img {
+    width: 100%;          /* Forces image to scale perfectly to container width */
+    height: 200px;        /* Consistent structural card heights */
+    border: 1px dashed #C2B4A6; /* Adds a nice wireframe mockup boundary look */
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+    background-color: #EADFD5;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: 900;
+}
+
+.project-card .img span {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: #7A6350; /* Softer brown text for a premium placeholder appearance */
+    text-transform: uppercase;
+    display: inline-block;
+    transform: rotate(-15deg); /* Rotates the text counter-clockwise */
+}
+
 /* MOBILE RESPONSIVE STYLES */
 @media (max-width: 768px) {
     html, body {
@@ -222,11 +297,16 @@ nav img {
         font-size: 1.8rem;
     }
 
-    .service-grid {
+    .project-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-grid, .project-grid {
         gap: 1.5rem;
     }
     
-    .service-card {
+    .service-card, .project-card {
         padding: 2rem 1.5rem;
     }
 }
