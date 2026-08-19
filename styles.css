@@ -1,3 +1,4 @@
+/* --- GLOBAL UTILITIES --- */
 html {
     scroll-behavior: smooth;
 }
@@ -174,18 +175,40 @@ nav img {
         overflow-x: clip;
     }
 
+    /* Keeps items horizontal, matches desktop alignment, and reduces padding */
     nav {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
+        flex-direction: row; /* Forces horizontal alignment like desktop */
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem; /* Tighter padding for mobile screens */
+        gap: 0.5rem;
     }
 
+    /* Scales down the nav container spacing */
     .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;                  /* Prevents excessive mobile gaps */
+        flex-wrap: nowrap; /* Prevents links from breaking into multiple rows */
+        justify-content: flex-end;
+        gap: 0.5rem; /* Reduces spacing between links so they fit on mobile */
+        margin-left: auto;
     }
 
+    /* Reduces link padding and font size slightly so they don't overflow */
+    nav a {
+        padding: 6px 8px; 
+        font-size: 0.85rem;
+    }
+
+    /* Slightly tightens button margin on small screens */
+    #nav-btn {
+        margin-left: 0.5rem;
+    }
+
+    /* Lowers image height so it doesn't take over the screen */
+    nav img {
+        height: 35px;
+    }
+
+    /* Hero & Services responsive sizes */
     .hero h1 {
         font-size: 1.8rem;
     }
