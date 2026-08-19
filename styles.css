@@ -175,37 +175,38 @@ nav img {
         overflow-x: clip;
     }
 
-    /* Keeps items horizontal, matches desktop alignment, and reduces padding */
+    /* Scales down navigation padding to save critical screen width */
     nav {
-        flex-direction: row; /* Forces horizontal alignment like desktop */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
-        padding: 0.75rem 1rem; /* Tighter padding for mobile screens */
-        gap: 0.5rem;
+        padding: 0.5rem 0.75rem; 
+        gap: 0.25rem;
     }
 
-    /* Scales down the nav container spacing */
+    /* Packs links tightly to prevent them from pushing the button off-screen */
     .nav {
-        flex-wrap: nowrap; /* Prevents links from breaking into multiple rows */
+        flex-wrap: nowrap; 
         justify-content: flex-end;
-        gap: 0.5rem; /* Reduces spacing between links so they fit on mobile */
+        gap: 0.25rem; 
         margin-left: auto;
     }
 
-    /* Reduces link padding and font size slightly so they don't overflow */
+    /* Minimizes padding and text size so links take up less space */
     nav a {
-        padding: 6px 8px; 
-        font-size: 0.85rem;
+        padding: 4px 6px; 
+        font-size: 0.8rem;
     }
 
-    /* Slightly tightens button margin on small screens */
+    /* Reduces margin on the button so it stays fully visible */
     #nav-btn {
-        margin-left: 0.5rem;
+        margin-left: 0.25rem;
+        padding: 6px 12px; /* Slims down the button size */
     }
 
-    /* Lowers image height so it doesn't take over the screen */
+    /* Shrinks the logo image height so it leaves room for text links */
     nav img {
-        height: 35px;
+        height: 30px;
     }
 
     /* Hero & Services responsive sizes */
@@ -221,7 +222,6 @@ nav img {
         font-size: 1.8rem;
     }
 
-    /* Extra optimization for mobile grid padding */
     .service-grid {
         gap: 1.5rem;
     }
