@@ -1,0 +1,312 @@
+/* --- GLOBAL UTILITIES --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #4B3621;            /* Deep brown font theme */
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR (DESKTOP DEFAULT) */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    background-color: bisque;
+    color: #4B3621;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Pushes logo left and links container right */
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;                      /* Increases gap to space links out evenly */
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #4B3621;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #000000;
+    transform: scale(1.05);
+}
+
+#nav-btn {
+    border-radius: 10px;
+    border: 2px solid #4B3621;
+    background-color: #4B3621;
+    color: #FDFBF7;
+    margin-left: 1.5rem;
+}
+
+nav img {
+    width: auto;
+    height: 50px;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    background-color: #FDFBF7;
+    color: #1A0F0A;
+    padding: 6rem 2rem;
+    border-bottom: 2px solid #E5DFD3;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero a {
+    text-decoration: none;
+    border: 2px solid #4B3621;
+    border-radius: 10px;
+    background-color: #4B3621;
+    color: #FDFBF7;
+    padding: 12px 24px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.hero a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* SERVICES SECTION CONTAINER */
+#services {
+    text-align: center;
+    background-color: #F4EFEA;
+    color: #1A0F0A;
+    padding: 6rem 2rem;
+    border-bottom: 2px solid #E5DFD3;
+}
+
+#services h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+#services p {
+    font-size: 1.1rem;
+    margin-bottom: 40px; /* Gives a little bit more space before the cards appear */
+}
+
+/* SERVICE GRID CONTAINER */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Aligns card text nicely inside the centered grid */
+}
+
+/* INDIVIDUAL SERVICE CARD */
+.service-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5DFD3;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ICON STYLES */
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* CARD HEADINGS */
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #1A0F0A;
+    margin: 0;
+}
+
+/* CARD DESCRIPTIONS */
+.service-card p {
+    font-size: 1rem;
+    color: #4A3B32; /* Slightly softer contrast for better readability */
+    line-height: 1.6;
+    margin: 0; /* Resets the global #services p margin inside cards */
+}
+
+/* INTERACTIVE HOVER STATE */
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #1A0F0A; /* Highlights the card utilizing your text color */
+    box-shadow: 0 12px 24px rgba(26, 15, 10, 0.06);
+    cursor: pointer;
+}
+
+/* PROJECTS SECTION */
+#projects {
+    background-color: #FDFBF7;
+    color: #1A0F0A;
+    padding: 6rem 2rem;
+    border-bottom: 2px solid #E5DFD3;
+}
+
+.project-header h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem; /* Clean separating distance before grid cards */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #F4EFEA;
+    border: 2px solid rgba(26, 15, 10, 0.06);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Keeps card descriptions professional and readable */
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #1A0F0A;
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4B3621;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* FIXED IMAGE CONFIGURATION */
+.project-card .img {
+    width: 100%;          /* Forces image to scale perfectly to container width */
+    height: 200px;        /* Consistent structural card heights */
+    border: 1px dashed #C2B4A6; /* Adds a nice wireframe mockup boundary look */
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+    background-color: #EADFD5;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: 900;
+}
+
+.project-card .img span {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: #7A6350; /* Softer brown text for a premium placeholder appearance */
+    text-transform: uppercase;
+    display: inline-block;
+    transform: rotate(-15deg); /* Rotates the text counter-clockwise */
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: clip;
+    }
+
+    /* Scales down navigation padding to save critical screen width */
+    nav {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem; 
+        gap: 0.25rem;
+    }
+
+    /* Packs links tightly to prevent them from pushing the button off-screen */
+    .nav {
+        flex-wrap: nowrap; 
+        justify-content: flex-end;
+        gap: 0.25rem; 
+        margin-left: auto;
+    }
+
+    /* Minimizes padding and text size so links take up less space */
+    nav a {
+        padding: 4px 6px; 
+        font-size: 0.8rem;
+    }
+
+    /* Reduces margin on the button so it stays fully visible */
+    #nav-btn {
+        margin-left: 0.25rem;
+        padding: 6px 12px; /* Slims down the button size */
+    }
+
+    /* Shrinks the logo image height so it leaves room for text links */
+    nav img {
+        height: 30px;
+    }
+
+    /* Hero & Services responsive sizes */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #services h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-grid, .project-grid {
+        gap: 1.5rem;
+    }
+    
+    .service-card, .project-card {
+        padding: 2rem 1.5rem;
+    }
+}
